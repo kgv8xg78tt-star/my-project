@@ -1,0 +1,14 @@
+# Скопируйте в public_html сайта (или в каталог с доменом) и подставьте свои пути.
+# Путь к node: выполните `which node` в SSH (часто ~/.local/bin/node в Docker-окружении Beget).
+
+PassengerNodejs /home/u/ВАШ_ЛОГИН/.local/bin/node
+# Корень репозитория (рядом лежат папки server/, client/ и node_modules после npm ci)
+PassengerAppRoot /home/u/ВАШ_ЛОГИН/ПУТЬ/kolpakoff_shop
+PassengerAppType node
+PassengerStartupFile server/dist/index.js
+
+SetEnv NODE_ENV production
+# Абсолютный путь к каталогу с папками проектов, logo.jpg и т.д. (как на локальной машине — корень «магазина»)
+SetEnv SHOP_ROOT_DIR /home/u/ВАШ_ЛОГИН/ПУТЬ/kolpakoff_shop_data
+
+PassengerFriendlyErrorPages off
