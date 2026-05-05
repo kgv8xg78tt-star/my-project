@@ -17,7 +17,7 @@ import { generateCommercialOfferPdf, type CommercialOfferRequest } from "./comme
 const APP_PORT = Number(process.env.PORT ?? 5177);
 
 // В задании просили использовать E:\\Kolpakoff_shop
-const SHOP_ROOT_DIR = process.env.SHOP_ROOT_DIR ?? "E:\\Kolpakoff_shop";
+const SHOP_ROOT_DIR = process.env.SHOP_ROOT_DIR || "/opt/render/project/src";
 
 const app = express();
 
